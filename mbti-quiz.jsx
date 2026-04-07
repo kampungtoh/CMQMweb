@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // ══════════════════════════════════════════════════════════════════════
 // ★ 請把你的 Google Apps Script 網頁應用程式網址貼在這裡 ★
 // ══════════════════════════════════════════════════════════════════════
-const SHEET_URL = "https://script.google.com/macros/s/你的部署ID/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbwTHYnw1zHdnuKnYkE9lqRhU1114Se9PJN0X6uKwvk6WTix1Yt-AseUJahkX6sFsGaU/exec";
 
 // ─── 問題資料 ─────────────────────────────────────────────────────────
 const QUESTIONS = [
