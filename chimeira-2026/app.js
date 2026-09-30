@@ -15,3 +15,13 @@ window.addEventListener('message',event=>{
  if(event.origin!==registrationOrigin||event.source!==frame.contentWindow)return;
  if(event.data?.type==='chimeira-form-height'&&Number.isFinite(event.data.height))frame.style.height=Math.min(3000,Math.max(400,event.data.height+24))+'px';
 });
+// Subtle reveal follows the supplied scrolling reference. All content stays visible without JavaScript.
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+ const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){entry.target.classList.remove('reveal-pending');entry.target.classList.add('reveal-visible');revealObserver.unobserve(entry.target);}
+ }),{threshold:0.06,rootMargin:'0px 0px 30px 0px'});
+ document.querySelectorAll('.section-heading,.section > h2,.split,.values,.speaker,.workshop,.registration-types,.host-row').forEach(element=>{
+  element.classList.add('reveal');
+  if(element.getBoundingClientRect().top>window.innerHeight+40){element.classList.add('reveal-pending');revealObserver.observe(element);}
+ });
+}

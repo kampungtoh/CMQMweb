@@ -35,3 +35,9 @@ https://chimeira-2026-registration.garytoh.chatgpt.site/admin
 
 場地官方資料：https://stb.stpi.niar.org.tw/page/introduction
 企劃來源：2026_雙管奇下_TTA南部據點_會議規劃報告書(1).docx；依使用者指示變更場地及協辦角色。
+
+## 視覺更新（2026-09-30）
+
+依提供的網站錄影採用留白、綠色線條、襯線標題、圓形構圖與捲動漸入；加入細網格、光流與節點動態。
+原始盾徽從 `Chimeira Symposium.pptx` 的 `ppt/media/image13.jpg` 原樣抽取，保存在 `assets/chimeira-original-logo.jpg`；不重繪、不更改色彩。
+字標延續簡報 C、M、RA 的紅色與其餘字母的深藍色。動態尊重 reduced-motion 設定，無 JavaScript 時內容仍可讀。
