@@ -13,3 +13,5 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 
 /* Keep the supplied shield centered, with readable captions beneath its orbit. */
 .hero-inner,.hero-visual,.hero-meta{animation:none}.orbit-stage{display:grid;place-items:center}.logo-halo{margin:0;width:72%}.orbit-tags{position:absolute;left:0;right:0;bottom:-28px;display:flex;justify-content:center;gap:6px 16px;flex-wrap:wrap}.orbit-tags .orbit-label{position:static;font-size:.9rem}.visual-caption{margin-top:58px}.hero-visual{padding-bottom:10px}@media(max-width:760px){.orbit-tags{bottom:-50px;gap:6px 12px}.visual-caption{margin-top:82px}.hero-visual{padding-bottom:4px}}
+
+.orbit-stage{grid-template-columns:1fr;grid-template-rows:1fr;justify-content:normal;align-content:normal}
