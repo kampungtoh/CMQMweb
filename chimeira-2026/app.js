@@ -30,8 +30,8 @@ function showInterest(key){
 document.querySelectorAll('[data-interest]').forEach(b=>b.addEventListener('click',()=>showInterest(b.dataset.interest)));
 function renderPath(){
  document.getElementById('path-workshop').textContent=selectedWorkshop?selectedWorkshop+'｜'+names[selectedWorkshop]:'一場平行工作坊';
- document.getElementById('path-afternoon').textContent=audience==='internal'?'受邀者參加院內共識營':'上午活動後自由交流';
- document.getElementById('path-note').textContent=audience==='internal'?'院內同仁可報名上午活動；下午須獲主管推薦或主辦單位邀請，並經資格確認。':'院外參加者可報名上午論壇及一場工作坊。';
+ document.getElementById('path-afternoon').textContent=audience==='internal'?'資格確認者參加院內共識營':'上午活動後自由交流';
+ document.getElementById('path-note').textContent=audience==='internal'?'院內同仁可登記下午共識營；登記後仍須由主辦單位確認資格及名額。':'院外參加者可報名上午論壇及一場工作坊。';
  document.querySelectorAll('[data-audience]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.audience===audience)));
 }
 document.querySelectorAll('[data-audience]').forEach(b=>b.addEventListener('click',()=>{audience=b.dataset.audience;renderPath();}));
