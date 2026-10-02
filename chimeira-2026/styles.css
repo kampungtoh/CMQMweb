@@ -61,3 +61,8 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 @media(prefers-reduced-motion:reduce){.speaker-light-ribbon{animation:none!important;opacity:.65}}
 
 @media(prefers-reduced-motion:reduce){.galaxy-stage{transform:none}.galaxy-stage .logo-halo{transform:none}}
+
+/* True-alpha shield: no blending or circular crop, including during 3D rotation. */
+.hero-visual,.galaxy-stage{mix-blend-mode:normal}.galaxy-stage .logo-halo{overflow:visible;border-radius:0;mix-blend-mode:normal;transform:translateZ(28px)}.galaxy-stage .logo-halo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:none;mix-blend-mode:normal}.brand-emblem{background:transparent;border-radius:0;overflow:visible}.brand-emblem img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transform:none}
+
+.galaxy-stage .logo-halo img{width:190%;height:100%;left:-45%;top:0}.brand-emblem img{width:190%;height:100%;left:-45%;top:0}

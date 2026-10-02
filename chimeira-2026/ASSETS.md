@@ -133,3 +133,51 @@
 ]
 
 ```
+
+## 2026-10-02 微笑半身肖像 v4
+
+三張1254×1254透明半身圖：湯宏仁雙手自然交握；廖家德依使用者提供照片抱臂，穿襯衫領帶；陳世英穿深藍西裝，一手扶領、一手於腰前。完整保留肩膀、手肘及可見手指，HTML採contain完整顯示。廖家德v4改以使用者提供照片為權威參考。
+
+```json
+[
+  {
+    "key": "tang",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic-v3.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent HALF-BODY lecturer portrait for website banner. Edit input target to a centered SQUARE 1024x1024 composition of the upper body from full head to waist. IMPORTANT: this is a close professional half-body portrait, NOT full body, NOT thigh length. Head must be prominent, around one quarter of canvas height, with torso and all posed hands fitting comfortably. Preserve actual individual's recognizable facial structure, hairstyle, glasses, age, skin tone and fine refined editorial comic rendering; elegant graphic novel ink lines, realistic cel shading, natural facial proportions, warm approachable smiling expression. BOTH shoulders, BOTH elbows, ALL visible hands, forearms and fingers must remain completely inside the canvas. Keep at least 12–15% transparent space on both sides beyond the widest elbow, 5% transparent space above head, and 5% below bottom of hands/waist figure. Natural professional upright anatomy, no props, no dangling arms below frame, no hand/shoulder/elbow cropped by canvas. Genuine transparent alpha background; isolated person with clean edges, no scene, backdrop, text, captions, logos, badges, insignia or watermark. Garment at waist terminates cleanly above bottom transparent margin. Use the specific pose below exactly. Input image 1 is authoritative Tang identity, style and attire target. Keep thin gold-rim glasses, side-parted black hair, rounded face, friendly visible-teeth smile, white physician coat over pale blue collared shirt, subtle cyan edge light. Distinct pose: relaxed slight three-quarter torso angle toward viewer's left while face turns toward viewer; BOTH hands loosely clasped together at lower abdomen just above waist, relaxed natural fingers and both entire elbows fully visible, no stiff arm position. Both hands fully included with margin beneath."
+  },
+  {
+    "key": "liao",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/liao-comic-v3.png",
+      "/workspace/scratch/7d90c8f5ae53/upload/image(20261002-073555).png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent HALF-BODY lecturer portrait for website banner. Edit input target to a centered SQUARE 1024x1024 composition of the upper body from full head to waist. IMPORTANT: this is a close professional half-body portrait, NOT full body, NOT thigh length. Head must be prominent, around one quarter of canvas height, with torso and all posed hands fitting comfortably. Preserve actual individual's recognizable facial structure, hairstyle, glasses, age, skin tone and fine refined editorial comic rendering; elegant graphic novel ink lines, realistic cel shading, natural facial proportions, warm approachable smiling expression. BOTH shoulders, BOTH elbows, ALL visible hands, forearms and fingers must remain completely inside the canvas. Keep at least 12–15% transparent space on both sides beyond the widest elbow, 5% transparent space above head, and 5% below bottom of hands/waist figure. Natural professional upright anatomy, no props, no dangling arms below frame, no hand/shoulder/elbow cropped by canvas. Genuine transparent alpha background; isolated person with clean edges, no scene, backdrop, text, captions, logos, badges, insignia or watermark. Garment at waist terminates cleanly above bottom transparent margin. Use the specific pose below exactly. Input image 1 is comic rendering edit target. Input image 2 is the NEW authoritative identity AND pose photo of Liao. Input image 3 Tang is only shared comic style reference, do not copy Tang's identity. Preserve Liao's actual short black hair, dark rectangular glasses, mustache and short beard, friendly tooth-visible smiling face, from photo 2. Distinct pose: EXACT same confident naturally crossed-arms pose and slight three-quarter torso angle as photo 2, with BOTH elbows entirely within square frame and 12–15% side margin, naturally tucked hand and all visible fingers intact, wrists and forearms complete; natural overlapping anatomy. Change outfit: REMOVE THE PHYSICIAN COAT COMPLETELY, no white overcoat/lapels, wear only pale blue long-sleeve business shirt and dark brown/black patterned tie matching photo 2, tidy cuffs. Keep the blue-black wristwatch visible as in pose reference. Subtle violet edge light."
+  },
+  {
+    "key": "chen",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/chen-comic-v3.png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent HALF-BODY lecturer portrait for website banner. Edit input target to a centered SQUARE 1024x1024 composition of the upper body from full head to waist. IMPORTANT: this is a close professional half-body portrait, NOT full body, NOT thigh length. Head must be prominent, around one quarter of canvas height, with torso and all posed hands fitting comfortably. Preserve actual individual's recognizable facial structure, hairstyle, glasses, age, skin tone and fine refined editorial comic rendering; elegant graphic novel ink lines, realistic cel shading, natural facial proportions, warm approachable smiling expression. BOTH shoulders, BOTH elbows, ALL visible hands, forearms and fingers must remain completely inside the canvas. Keep at least 12–15% transparent space on both sides beyond the widest elbow, 5% transparent space above head, and 5% below bottom of hands/waist figure. Natural professional upright anatomy, no props, no dangling arms below frame, no hand/shoulder/elbow cropped by canvas. Genuine transparent alpha background; isolated person with clean edges, no scene, backdrop, text, captions, logos, badges, insignia or watermark. Garment at waist terminates cleanly above bottom transparent margin. Use the specific pose below exactly. Input image 1 Chen is authoritative actual identity target. Input image 2 Tang is only shared editorial comic rendering reference, never transfer Tang's identity. Keep short silver-gray hair, black rectangular glasses, older age, full face, distinctive ears. Warm natural smiling mouth and smiling eyes, approachable, no exaggerated grin. Change attire to tailored NAVY BUSINESS SUIT JACKET over white collared shirt and dark tie, no physician coat. Distinct pose: upright professionally relaxed torso facing viewer, one hand resting lightly at jacket lapel near upper chest with natural gently curved fingers, other arm bent naturally and other hand relaxed visibly across lower waist, BOTH elbows fully inside with side margins and BOTH hands entirely visible with bottom margin, neither arm dangling. Subtle emerald/gold edge light."
+  }
+]
+
+```
+
+## 透明盾徽
+
+以原始盾徽作背景去除編輯，白色外底及內部留白皆為真正alpha透明，保留獅、羊、雙蛇、紅杖及金盾配置；細部線條由影像模型重繪，並非逐像素相同。以無損WebP呈現，取消multiply及圓形裁切。
+
+```json
+{
+  "input": "/workspace/scratch/7d90c8f5ae53/cmqmweb/chimeira-2026/assets/chimeira-original-logo.jpg",
+  "prompt": "Use case: background-extraction. Input image is the original ChiMeiRA logo and is the exact edit target. Remove ONLY every white background area to genuine transparent alpha, including exterior background AND all interior white negative-space: inside the gold shield, between wing feathers, within lion mane linework, goat hair/horn linework, animal eyes, between serpent coils and the medical staff. Preserve the exact ORIGINAL colored logo without redesign: navy blue lion and left wings/serpent, green goat and right wings/serpent, red vertical medical staff with circular top and pointed base, original gold outlined shield. Keep all original shapes, detailed linework, colors, orientation, relative scale, proportions and placement. NO new drawing or features, no stylization, no smoothing away detail, no text, no glow, no shadows, no border, no white fill, no white rectangle, no scene. Transparent PNG cutout of the ORIGINAL logo only; keep all colored elements fully visible and uncut. Genuine transparency throughout every formerly white area, clean antialiased edges.",
+  "mode": "built-in imagegen edit",
+  "transparent_background": true
+}
+
+```
