@@ -29,17 +29,19 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 /* AI-gradient chapters, editorial portraits and the ChiMeiRA galaxy. */
 .hero-scene{background:radial-gradient(ellipse at 85% 30%,#c7dcff55,transparent 55%),radial-gradient(ellipse at 55% 90%,#9be9d733,transparent 50%);opacity:1}
 .hero-visual{display:flex;flex-direction:column;align-items:center;gap:14px}
-.galaxy-stage{max-width:540px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none}
+.hero-visual{perspective:1000px}
+.galaxy-stage{max-width:540px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none;transform-style:preserve-3d;transform:rotateX(var(--galaxy-x,0deg)) rotateY(var(--galaxy-y,0deg));touch-action:pan-y;outline-offset:12px}
+.galaxy-stage:focus-visible{outline:2px solid #6b9fba;border-radius:50%}
 .galaxy-stage:before{inset:-14%;background:radial-gradient(ellipse at 65% 40%,#b9dcf333,transparent 58%),radial-gradient(ellipse at 30% 65%,#bde4d944,transparent 55%);border-radius:50%;box-shadow:none;animation:none;pointer-events:none}
 #logo-galaxy{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.galaxy-stage .logo-halo{width:59%;background:transparent;border:0;box-shadow:none;mix-blend-mode:multiply;z-index:1}
+.galaxy-stage .logo-halo{width:59%;background:transparent;border:0;box-shadow:none;mix-blend-mode:multiply;z-index:1;transform:translateZ(28px)}
 .galaxy-stage .logo-halo:after{display:none}
 .chapter-cover:before{background-position:center 25%}.chapter-cover:after{background:linear-gradient(90deg,#06172bc2 0%,#071c304d 62%,transparent)}
 .chapter-caption{color:#d4edec;font-size:.8rem;letter-spacing:.04em}
 .speaker-topic-image{min-height:280px;align-items:flex-end;padding:24px 20px}
 .speaker-topic-image:before{background-position:center 25%}.speaker-topic-image:after{background:linear-gradient(90deg,#061428ab,transparent 80%)}
-.speaker-portrait{position:absolute;right:-8%;bottom:0;height:96%;width:76%;object-fit:contain;object-position:right bottom;z-index:1;filter:drop-shadow(-4px 2px 15px #080d3e60)}
-.speaker-no{position:relative;z-index:3;display:flex;flex-direction:column;align-items:flex-start;gap:5px;max-width:56%;font-size:.94rem;letter-spacing:.035em;line-height:1.4;text-shadow:0 2px 12px #000c}
+.speaker-portrait{position:absolute;right:3%;bottom:0;height:94%;width:68%;object-fit:contain;object-position:center bottom;z-index:1;filter:drop-shadow(-4px 2px 15px #080d3e60)}
+.speaker-no{position:relative;z-index:3;display:flex;flex-direction:column;align-items:flex-start;gap:5px;max-width:43%;font-size:.94rem;letter-spacing:.035em;line-height:1.4;text-shadow:0 2px 12px #000c}
 .speaker-no b{font-size:3.7rem;line-height:1;font-weight:650;color:#fff}
 .speaker-topic-image>small{top:14px;left:20px;right:auto;z-index:3;font-size:.75rem;color:#e0f6ff}
 .speaker-light-ribbon{position:absolute;width:160%;height:38%;left:-30%;bottom:5%;transform:rotate(-17deg);z-index:2;pointer-events:none;background:linear-gradient(0deg,transparent,#81f3ff22 42%,#d9ffffab 48%,#85eeff44 51%,transparent 58%);filter:blur(1px);animation:ribbon-flow 7s ease-in-out infinite alternate;animation-play-state:paused;mix-blend-mode:screen}
@@ -55,5 +57,7 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 .consensus .lead,.consensus .fine{color:#344d46}.consensus .fine{font-size:1rem}
 .consensus .chapter-cover .section-label{color:#fff}.consensus-topics span{color:#234c42;background:#fff;border-color:#aec8be}
 .registration .muted{color:#42594f}.registration .muted strong{color:#164c3f}
-@media(max-width:760px){.galaxy-stage{max-width:390px;border-radius:0}.speaker-topic-image{min-height:300px}.speaker-portrait{right:-3%;width:71%}.speaker-no{font-size:1.1rem;max-width:52%}.speaker-no b{font-size:4rem}}
+@media(max-width:760px){.galaxy-stage{max-width:390px;border-radius:0}.speaker-topic-image{min-height:300px}.speaker-portrait{right:3%;width:68%}.speaker-no{font-size:1.1rem;max-width:43%}.speaker-no b{font-size:4rem}}
 @media(prefers-reduced-motion:reduce){.speaker-light-ribbon{animation:none!important;opacity:.65}}
+
+@media(prefers-reduced-motion:reduce){.galaxy-stage{transform:none}.galaxy-stage .logo-halo{transform:none}}

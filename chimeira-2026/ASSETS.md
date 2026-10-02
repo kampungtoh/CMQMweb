@@ -99,3 +99,37 @@
 ]
 
 ```
+
+## 2026-10-02 · 完整肩臂與微笑肖像 v3
+
+使用內建 image_gen，保留漫畫辨識特徵與服裝；三位皆完整肩臂及雙手、自然微笑。廖家德依本次使用者提供的照片更新相貌與白袍、襯衫、領帶。網站以 contain 呈現，人物位於卡片內並留白。
+
+```json
+[
+  {
+    "key": "tang",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent lecturer figure for medical AI symposium banner. Edit the existing comic portrait into a complete natural standing upper-body figure from the full head through the upper thighs. Preserve actual individual's recognizable identity, face structure, age, hairstyle, glasses and fine refined editorial comic rendering: elegant graphic novel ink contours, refined realistic cel shading and natural facial proportions, matching the Tang style reference. All lecturers must have a warm natural smiling expression. Pose: relaxed standing upright with slightly turned shoulders and face looking at viewer, BOTH arms naturally hanging along the sides, BOTH complete arms including hands and all fingertips fully visible inside canvas. Natural correct human anatomy and hand proportions, soft relaxed fingers, no gestures or props. Composition: 1024x1536 portrait canvas, figure scaled down enough to leave 10–15% fully transparent blank margin at BOTH sides beyond the widest arm, 5% fully transparent margin above head and 5% below the upper-thigh termination. All hair, BOTH shoulders, BOTH upper arms, BOTH elbows, BOTH forearms, BOTH wrists and BOTH hands fully within the frame. Absolutely no horizontal edge cropping, no arm or shoulder touching side edges. No crossed arms, no hands in pockets, no thumbs-up, no objects, no exaggerated poses, no rectangular cut-outs. The garment/upper thighs end cleanly above the bottom edge with transparent margin below. Genuinely transparent alpha background with clean isolated figure; no scene, backdrop, text, letters, logo, watermark, badges or emblems. Input image 1 is Tang's existing comic portrait, the authoritative identity, outfit and rendering reference. Keep his neat side-parted black hair, thin gold-rim glasses, rounded face, friendly visible-teeth smile. Keep plain white physician coat over pale blue collared shirt and subtle cyan edge light. Extend the natural figure and fully visible relaxed arms/hands without altering his identity."
+  },
+  {
+    "key": "liao",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/liao-comic-v2.png",
+      "/workspace/scratch/7d90c8f5ae53/upload/image(20261002-073555).png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent lecturer figure for medical AI symposium banner. Edit the existing comic portrait into a complete natural standing upper-body figure from the full head through the upper thighs. Preserve actual individual's recognizable identity, face structure, age, hairstyle, glasses and fine refined editorial comic rendering: elegant graphic novel ink contours, refined realistic cel shading and natural facial proportions, matching the Tang style reference. All lecturers must have a warm natural smiling expression. Pose: relaxed standing upright with slightly turned shoulders and face looking at viewer, BOTH arms naturally hanging along the sides, BOTH complete arms including hands and all fingertips fully visible inside canvas. Natural correct human anatomy and hand proportions, soft relaxed fingers, no gestures or props. Composition: 1024x1536 portrait canvas, figure scaled down enough to leave 10–15% fully transparent blank margin at BOTH sides beyond the widest arm, 5% fully transparent margin above head and 5% below the upper-thigh termination. All hair, BOTH shoulders, BOTH upper arms, BOTH elbows, BOTH forearms, BOTH wrists and BOTH hands fully within the frame. Absolutely no horizontal edge cropping, no arm or shoulder touching side edges. No crossed arms, no hands in pockets, no thumbs-up, no objects, no exaggerated poses, no rectangular cut-outs. The garment/upper thighs end cleanly above the bottom edge with transparent margin below. Genuinely transparent alpha background with clean isolated figure; no scene, backdrop, text, letters, logo, watermark, badges or emblems. Input image 1 is Liao's current comic edit target. Input image 2 is the NEW AUTHORITATIVE user photo for Liao's identity, smiling expression and outfit; prioritize it over image 1 wherever they differ. Input image 3 is Tang, exclusively the shared editorial comic rendering reference, never transfer Tang's face. Match Liao in the new photo: short black hair with natural side sweep, dark rectangular glasses, neat mustache and full short beard, broad natural visible-teeth smile. White doctor coat over pale blue collared shirt and dark brown/black patterned tie matching the NEW photo, with plain unlettered coat and no ID badge. Do NOT retain old crew-neck T-shirt. Do NOT copy the photo's crossed-arm pose; show both arms fully lowered relaxed beside body and both hands fully visible. Subtle violet edge light."
+  },
+  {
+    "key": "chen",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/chen-comic-v2.png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent lecturer figure for medical AI symposium banner. Edit the existing comic portrait into a complete natural standing upper-body figure from the full head through the upper thighs. Preserve actual individual's recognizable identity, face structure, age, hairstyle, glasses and fine refined editorial comic rendering: elegant graphic novel ink contours, refined realistic cel shading and natural facial proportions, matching the Tang style reference. All lecturers must have a warm natural smiling expression. Pose: relaxed standing upright with slightly turned shoulders and face looking at viewer, BOTH arms naturally hanging along the sides, BOTH complete arms including hands and all fingertips fully visible inside canvas. Natural correct human anatomy and hand proportions, soft relaxed fingers, no gestures or props. Composition: 1024x1536 portrait canvas, figure scaled down enough to leave 10–15% fully transparent blank margin at BOTH sides beyond the widest arm, 5% fully transparent margin above head and 5% below the upper-thigh termination. All hair, BOTH shoulders, BOTH upper arms, BOTH elbows, BOTH forearms, BOTH wrists and BOTH hands fully within the frame. Absolutely no horizontal edge cropping, no arm or shoulder touching side edges. No crossed arms, no hands in pockets, no thumbs-up, no objects, no exaggerated poses, no rectangular cut-outs. The garment/upper thighs end cleanly above the bottom edge with transparent margin below. Genuinely transparent alpha background with clean isolated figure; no scene, backdrop, text, letters, logo, watermark, badges or emblems. Input image 1 is Chen's current comic target, authoritative for actual identity and clothing. Input image 2 Tang is exclusively shared editorial rendering reference, never transfer Tang's identity. Keep Chen's short silver-gray hair, black rectangular glasses, full face, distinctive ears, older age and natural proportions. Give him a warm natural smile, slightly upturned mouth and gently smiling eyes, avoiding exaggerated grin. Keep plain white collared shirt and black tie, no coat. Subtle emerald/gold edge light. Extend body and relaxed arms/hands naturally."
+  }
+]
+
+```
