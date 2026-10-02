@@ -68,3 +68,4 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 .galaxy-stage .orbit-tags{inset:0;display:block;pointer-events:none}
 .galaxy-stage .orbit-tags .orbit-label{position:absolute;bottom:auto}
 .galaxy-stage .orbit-tags .orbit-label-c{top:auto;bottom:9%}
+.galaxy-stage .orbit-tags .orbit-label-b{top:16%;right:5%}
