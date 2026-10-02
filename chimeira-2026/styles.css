@@ -29,19 +29,11 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 /* AI-gradient chapters, editorial portraits and the ChiMeiRA galaxy. */
 .hero-scene{background:radial-gradient(ellipse at 85% 30%,#c7dcff55,transparent 55%),radial-gradient(ellipse at 55% 90%,#9be9d733,transparent 50%);opacity:1}
 .hero-visual{display:flex;flex-direction:column;align-items:center;gap:14px}
-.galaxy-stage{max-width:510px;border-radius:36px;overflow:hidden;background:radial-gradient(ellipse at 50% 55%,#19334f 0%,#0c172e 43%,#070e1d 80%);box-shadow:0 24px 64px #10274722;border:1px solid #b9dbed66}
-.galaxy-stage:before{inset:12%;box-shadow:0 0 70px #50d2dd33;pointer-events:none}
+.galaxy-stage{max-width:540px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none}
+.galaxy-stage:before{inset:-14%;background:radial-gradient(ellipse at 65% 40%,#b9dcf333,transparent 58%),radial-gradient(ellipse at 30% 65%,#bde4d944,transparent 55%);border-radius:50%;box-shadow:none;animation:none;pointer-events:none}
 #logo-galaxy{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.galaxy-stage .logo-halo{width:57%;z-index:1;box-shadow:0 0 36px #98ece77a,0 0 80px #577aff40;border:2px solid #a2e1df}
-.galaxy-stage .orbit{z-index:2;pointer-events:none;border-color:#8dbbcd70}
-.galaxy-stage .orbit-one{inset:12%;border-width:1px;box-shadow:0 0 20px #6bccda20}
-.galaxy-stage .orbit-two{inset:6%;border-style:dashed;border-color:#b8b0eb66}
-.galaxy-stage .orbit-label{background:#0d2038e8;color:#d6f5f4;border:1px solid #68b6c580;font-size:.8rem;padding:5px 12px}
-.galaxy-stage .orbit-label-a{left:5%;top:16%}.galaxy-stage .orbit-label-b{right:3%;top:45%}.galaxy-stage .orbit-label-c{left:15%;bottom:9%}
-.galaxy-stage .orbit-node{z-index:3;background:#b0ffff;box-shadow:0 0 15px #75e9f9}
-.visual-caption{font-size:.9rem;letter-spacing:.12em;color:#36524d}
-.galaxy-control{border:1px solid #b2cbc6;background:#fff;color:#284b46;padding:6px 15px;border-radius:22px;font:inherit;font-size:.85rem;cursor:pointer}
-.galaxy-control:hover{background:#e6f3f0}.galaxy-paused .orbit,.galaxy-paused .orbit-node,.galaxy-paused:before{animation-play-state:paused!important}
+.galaxy-stage .logo-halo{width:59%;background:transparent;border:0;box-shadow:none;mix-blend-mode:multiply;z-index:1}
+.galaxy-stage .logo-halo:after{display:none}
 .chapter-cover:before{background-position:center 25%}.chapter-cover:after{background:linear-gradient(90deg,#06172bc2 0%,#071c304d 62%,transparent)}
 .chapter-caption{color:#d4edec;font-size:.8rem;letter-spacing:.04em}
 .speaker-topic-image{min-height:280px;align-items:flex-end;padding:24px 20px}
@@ -63,9 +55,5 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 .consensus .lead,.consensus .fine{color:#344d46}.consensus .fine{font-size:1rem}
 .consensus .chapter-cover .section-label{color:#fff}.consensus-topics span{color:#234c42;background:#fff;border-color:#aec8be}
 .registration .muted{color:#42594f}.registration .muted strong{color:#164c3f}
-@media(max-width:760px){.galaxy-stage{max-width:380px;border-radius:26px}.speaker-topic-image{min-height:300px}.speaker-portrait{right:-3%;width:71%}.speaker-no{font-size:1.1rem;max-width:52%}.speaker-no b{font-size:4rem}}
+@media(max-width:760px){.galaxy-stage{max-width:390px;border-radius:0}.speaker-topic-image{min-height:300px}.speaker-portrait{right:-3%;width:71%}.speaker-no{font-size:1.1rem;max-width:52%}.speaker-no b{font-size:4rem}}
 @media(prefers-reduced-motion:reduce){.speaker-light-ribbon{animation:none!important;opacity:.65}}
-.galaxy-stage .orbit-tags{inset:0;display:block;pointer-events:none}
-.galaxy-stage .orbit-tags .orbit-label{position:absolute;bottom:auto}
-.galaxy-stage .orbit-tags .orbit-label-c{top:auto;bottom:9%}
-.galaxy-stage .orbit-tags .orbit-label-b{top:16%;right:5%}

@@ -71,3 +71,31 @@
 
 ```
 
+
+## 2026-10-02 姿勢修訂
+
+湯宏仁原圖保留，廖家德與陳世英改為同樣自然、雙臂放鬆的半身姿勢，不含手勢；使用 `liao-comic-v2.webp` 與 `chen-comic-v2.webp`。參照既有漫畫、湯宏仁姿勢與上述公開人物照片，透明背景保持不變。Logo區改用透明星系Canvas融入整體淺色底，不含獨立深色面板、文字標籤或暫停按鈕。
+
+```json
+[
+  {
+    "key": "liao",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/liao-comic.png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/references/liao.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent editorial comic portrait pose correction. Input image 1 is the edit target portrait; image 2 (Tang portrait) is exclusively the STYLE, POSTURE, HEAD SIZE and FRAMING reference; image 3 is the actual individual's verified identity photo. Edit only the pose and framing of image 1. Keep the actual person from image 1 and image 3, never Tang's identity. Preserve the recognizable face, exact facial features, glasses, hairstyle, hair color, age, skin tone, friendly expression, clothing and existing fine editorial graphic novel ink lines and refined natural cel shading. Change to image 2's natural relaxed chest-up/half-body posture: centered upright torso, gently turned relaxed shoulders, face toward viewer, both arms hanging naturally relaxed beside the torso and low/outside frame, absolutely no visible hands. Match image 2's complete uncut head, relative head size, shoulder width and half-body chest framing within a 1024x1536 portrait canvas, comfortable top margin. Create a smooth natural garment silhouette down to the canvas bottom, with normal relaxed shoulders and sleeves; no stiff angular arms, no asymmetrical rectangular cut-outs, no crossed arms, no gestures, no thumbs-up. True transparent alpha background, no scene, no backdrop, no text, no labels, no logo, no watermark. Do not alter or reproduce Tang's face or outfit details; use only his relaxed pose, style and framing as reference. Identity invariants: Liao's short neatly styled dark hair, black rectangular glasses, light moustache and stubble, wide approachable toothy smile. Keep his plain white doctor coat and plain white crew-neck T-shirt. Remove the existing raised thumbs-up arm completely, replace with naturally lowered arm at his side out of view, no visible hand anywhere. Keep subtle violet edge light."
+  },
+  {
+    "key": "chen",
+    "paths": [
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/chen-comic.png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/tang-comic.png",
+      "/workspace/scratch/7d90c8f5ae53/chimeira-new-assets/references/chen.jpg"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: transparent editorial comic portrait pose correction. Input image 1 is the edit target portrait; image 2 (Tang portrait) is exclusively the STYLE, POSTURE, HEAD SIZE and FRAMING reference; image 3 is the actual individual's verified identity photo. Edit only the pose and framing of image 1. Keep the actual person from image 1 and image 3, never Tang's identity. Preserve the recognizable face, exact facial features, glasses, hairstyle, hair color, age, skin tone, friendly expression, clothing and existing fine editorial graphic novel ink lines and refined natural cel shading. Change to image 2's natural relaxed chest-up/half-body posture: centered upright torso, gently turned relaxed shoulders, face toward viewer, both arms hanging naturally relaxed beside the torso and low/outside frame, absolutely no visible hands. Match image 2's complete uncut head, relative head size, shoulder width and half-body chest framing within a 1024x1536 portrait canvas, comfortable top margin. Create a smooth natural garment silhouette down to the canvas bottom, with normal relaxed shoulders and sleeves; no stiff angular arms, no asymmetrical rectangular cut-outs, no crossed arms, no gestures, no thumbs-up. True transparent alpha background, no scene, no backdrop, no text, no labels, no logo, no watermark. Do not alter or reproduce Tang's face or outfit details; use only his relaxed pose, style and framing as reference. Identity invariants: Chen's short silver-gray hair, black rectangular glasses, full face, distinctive ears and composed gentle closed-mouth smile. Keep his plain white collared shirt and black tie, no doctor coat. Make shoulders and torso mildly turned and relaxed like Tang's reference rather than a stiff squared frontal posture, face toward viewer. No visible hands, arms relaxed at his sides low/outside frame. Keep subtle emerald/gold edge light."
+  }
+]
+
+```
