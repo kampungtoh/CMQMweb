@@ -65,3 +65,6 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 .registration .muted{color:#42594f}.registration .muted strong{color:#164c3f}
 @media(max-width:760px){.galaxy-stage{max-width:380px;border-radius:26px}.speaker-topic-image{min-height:300px}.speaker-portrait{right:-3%;width:71%}.speaker-no{font-size:1.1rem;max-width:52%}.speaker-no b{font-size:4rem}}
 @media(prefers-reduced-motion:reduce){.speaker-light-ribbon{animation:none!important;opacity:.65}}
+.galaxy-stage .orbit-tags{inset:0;display:block;pointer-events:none}
+.galaxy-stage .orbit-tags .orbit-label{position:absolute;bottom:auto}
+.galaxy-stage .orbit-tags .orbit-label-c{top:auto;bottom:9%}
