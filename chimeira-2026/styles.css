@@ -30,11 +30,11 @@ html{font-size:18px}h2{font-weight:750;letter-spacing:.015em;line-height:1.45}h3
 .hero-scene{background:radial-gradient(ellipse at 85% 30%,#c7dcff55,transparent 55%),radial-gradient(ellipse at 55% 90%,#9be9d733,transparent 50%);opacity:1}
 .hero-visual{display:flex;flex-direction:column;align-items:center;gap:14px}
 .hero-visual{perspective:1000px}
-.galaxy-stage{max-width:540px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none;transform-style:preserve-3d;transform:rotateX(var(--galaxy-x,0deg)) rotateY(var(--galaxy-y,0deg));touch-action:pan-y;outline-offset:12px}
+.galaxy-stage{max-width:540px;overflow:visible;background:transparent;border:0;border-radius:0;box-shadow:none;mix-blend-mode:multiply;transform-style:preserve-3d;transform:rotateX(var(--galaxy-x,0deg)) rotateY(var(--galaxy-y,0deg));touch-action:pan-y;outline-offset:12px}
 .galaxy-stage:focus-visible{outline:2px solid #6b9fba;border-radius:50%}
 .galaxy-stage:before{inset:-14%;background:radial-gradient(ellipse at 65% 40%,#b9dcf333,transparent 58%),radial-gradient(ellipse at 30% 65%,#bde4d944,transparent 55%);border-radius:50%;box-shadow:none;animation:none;pointer-events:none}
 #logo-galaxy{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.galaxy-stage .logo-halo{width:59%;background:transparent;border:0;box-shadow:none;mix-blend-mode:multiply;z-index:1;transform:translateZ(28px)}
+.galaxy-stage .logo-halo{width:59%;background:transparent;border:0;box-shadow:none;mix-blend-mode:normal;z-index:1}
 .galaxy-stage .logo-halo:after{display:none}
 .chapter-cover:before{background-position:center 25%}.chapter-cover:after{background:linear-gradient(90deg,#06172bc2 0%,#071c304d 62%,transparent)}
 .chapter-caption{color:#d4edec;font-size:.8rem;letter-spacing:.04em}
