@@ -4,17 +4,16 @@ const frame=document.getElementById('registration-frame');
 const names={A:'智慧抗生素管理',B:'病人旅程與智慧品質照護',C:'醫療安全 × AI'};
 const descriptions={A:'從臨床情境出發，設計 AI 提醒、人工覆核與成效指標。',B:'從門診到返家，找出資訊斷點與值得改善的照護接觸點。',C:'從風險訊號、人因與人工覆核，設計 AI 病人安全護欄。'};
 let selectedWorkshop='',audience='external',readingSize=18;
-try { const saved=Number(localStorage.getItem('chimeira-reading-size'));if([18,20,22].includes(saved))readingSize=saved;}catch{}
 const postToForm=message=>frame.contentWindow?.postMessage(message,registrationOrigin);
 function setFont(size){
  readingSize=size;document.documentElement.style.fontSize=size+'px';
- document.querySelectorAll('[data-font]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.font)===size)));
- try{localStorage.setItem('chimeira-reading-size',String(size));}catch{}
+ 
+ 
  postToForm({type:'chimeira-reading-size',size});
  document.getElementById('standalone-registration').href=registrationOrigin+'/?font='+size+(selectedWorkshop?'&workshop='+selectedWorkshop:'');
 }
 setFont(readingSize);
-document.querySelectorAll('[data-font]').forEach(b=>b.addEventListener('click',()=>setFont(Number(b.dataset.font))));
+
 frame.addEventListener('load',()=>{postToForm({type:'chimeira-reading-size',size:readingSize});if(selectedWorkshop)postToForm({type:'chimeira-stage-workshop',workshop:selectedWorkshop});});
 document.querySelectorAll('[data-session]').forEach(button=>button.addEventListener('click',()=>{
  document.querySelectorAll('[data-session]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
@@ -58,3 +57,7 @@ document.getElementById('photo-next').addEventListener('click',()=>showPhoto(pho
 dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();showPhoto(photoIndex+1);}if(e.key==='ArrowLeft'){e.preventDefault();showPhoto(photoIndex-1);}});
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 dialog.addEventListener('close',()=>photoTrigger?.focus());
+
+// Animate visible photographic chapters only; honour reduced motion.
+const chapters=document.querySelectorAll(".chapter-cover,.speaker-topic-image");
+if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle("is-in-view",entry.isIntersecting)),{threshold:0.12});chapters.forEach(chapter=>observer.observe(chapter));}
