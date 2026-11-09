@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>雙管奇下．深耕臺南｜國際研討會暨醫品病安願景實踐營 — 活動回顧</title>
+<meta name="description" content="由奇美醫院品質管理部與感染管制中心共同主辦，結合國際研討會、工作坊、共識營與民眾沙龍四軸同場進行。此頁面為 2025 年 11 月 16 日活動之回顧與資源匯整。">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+  :root{
+    --blue:#0e7aa8; --yellow:#e0c23a; --ink:#10212a; --bg:#f7f8fb; --card:#ffffff;
+    --muted:#6c7a86; --accent:#145c74; --success:#2f9e44; --border:#eef1f4;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Noto Sans TC,Roboto,Helvetica,Arial,"PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg)}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+  /* HERO */
+  header.hero{position:relative;min-height:70vh;display:grid;place-items:center;background:linear-gradient(180deg,rgba(16,33,42,.65),rgba(16,33,42,.85)),url('../BGG.png') center/cover no-repeat;color:#fff}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;width:100%}
+  .brand{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+  .brand .logo{width:44px;height:44px;border-radius:8px;background:#fff;display:grid;place-items:center;color:var(--ink);font-weight:700}
+  h1{font-size:clamp(28px,4.2vw,56px);line-height:1.05;margin:0 0 12px}
+  .kicker{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#f8f9fa;opacity:.95;font-size:14px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .badge{background:rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);font-size:13px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:#1a1a1a;font-weight:800;border-radius:12px;padding:12px 16px;border:none;cursor:pointer;font-size:16px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .btn.secondary{background:#fff;color:var(--ink)}
+  .meta{margin-top:16px;color:#e8f0f5;font-size:14px}
+  /* Language Switch */
+  .lang-switch{position:fixed;top:12px;right:12px;z-index:10;display:flex;gap:8px}
+  .lang-switch a{background:#fff;color:#0e7aa8;border-radius:999px;padding:6px 10px;border:1px solid var(--border)}
+  [data-i18n]{display:none}
+  [data-lang="zh"] [data-i18n="zh"], [data-lang="en"] [data-i18n="en"]{display:block}
+  /* INFO STRIP */
+  .infostrip{background:#fff;box-shadow:0 4px 18px rgba(0,0,0,.06);margin-top:-48px;border-radius:16px;padding:18px}
+  .infogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .icard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:12px;align-items:flex-start}
+  .icard svg{width:28px;height:28px;flex:0 0 auto}
+  .icard h4{margin:0 0 6px;font-size:16px}
+  .icard p{margin:0;color:var(--muted);font-size:14px}
+  /* SECTIONS */
+  section{padding:56px 0}
+  section h2{font-size:32px;margin:0 0 16px}
+  .lead{color:var(--muted);max-width:880px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px}
+  .card h3{margin:0 0 10px}
+  .pill{display:inline-block;background:var(--blue);color:#fff;padding:4px 10px;border-radius:999px;font-size:12px;margin-right:6px}
+  /* Tracks */
+  .tracks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .track{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px}
+  .slot{border-left:4px solid var(--yellow);padding-left:10px;margin:12px 0}
+  .slot h4{margin:0 0 6px}
+  .note{color:var(--muted);font-size:13px}
+  /* Gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .thumb{overflow:hidden;border-radius:8px;border:1px solid var(--border);background:#fff;cursor:pointer}
+  .thumb img{width:100%;height:160px;object-fit:cover;display:block}
+  .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);z-index:1000;padding:20px}
+  .lightbox img{max-width:95%;max-height:90%;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+  .lightbox .meta{color:#fff;margin-top:8px}
+  .lightbox.show{display:flex}
+  /* Media list */
+  .media-list{display:flex;flex-direction:column;gap:12px}
+  .media-item{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--border);padding:12px;border-radius:10px}
+  .media-item img{width:84px;height:56px;object-fit:cover;border-radius:6px;flex:0 0 auto}
+  .media-item a{font-weight:700}
+  /* Grid */
+  .grid-2{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+  /* Footer */
+  footer{background:#0c1d26;color:#cfe5ef;padding:36px 0}
+  footer a{color:#fff;text-decoration:underline}
+  /* Responsive */
+  @media(max-width:1100px){.tracks{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:960px){.hero .wrap{grid-template-columns:1fr}.infogrid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.tracks{grid-template-columns:repeat(1,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.gallery-grid{grid-template-columns:repeat(1,1fr)}}
+</style>
+<link rel="alternate" hreflang="en" href="#">
+</head>
+<body>
+<nav style="padding:14px 20px;background:#0c1d26;color:white"><a href="../" style="color:white">← ChiMeiRA 品牌首頁</a> <span style="margin-left:16px">2025 活動回顧</span></nav>
+<div class="lang-switch" aria-label="Language">
+  <a href="#" data-setlang="zh">中</a>
+  <a href="#" data-setlang="en">EN</a>
+</div>
+
+<header class="hero">
+  <div class="container wrap">
+    <div>
+      <div class="brand">
+        <div class="logo">奇美</div>
+        <div class="kicker" data-i18n="zh">奇美醫院 — 品質管理部 × 感染管制中心</div>
+        <div class="kicker" data-i18n="en">Chi Mei Medical Center</div>
+      </div>
+      <h1 data-i18n="zh">雙管奇下．深耕台南<br>國際研討會暨醫品病安願景實踐營</h1>
+      <h1 data-i18n="en">ChiMeiRA International Symposium<br>Event Highlights & Archive</h1>
+      <div class="badges" data-i18n="zh">
+        <span class="badge">活動已於 2025/11/16（週日）舉行</span>
+        <span class="badge">奇美博物館｜奇美廳、豐收廳</span>
+      </div>
+      <div class="badges" data-i18n="en">
+        <span class="badge">Event held on Nov 16, 2025 (Sun)</span>
+        <span class="badge">Chi Mei Museum — Chi Mei Hall, Harvest Hall</span>
+      </div>
+      <p class="meta" id="countdown" data-i18n="zh">活動已結束，感謝所有講者與參與者，以下為回顧資源。</p>
+      <p class="meta" id="countdown-en" data-i18n="en">Event concluded — thank you to all speakers and attendees. Below are post-event resources.</p>
+      <div class="cta">
+        <a class="btn" href="#program" data-i18n="zh">議程</a>
+        <a class="btn" href="#program" data-i18n="en">Program</a>
+        <a class="btn secondary" href="#gallery" data-i18n="zh">活動相片</a>
+        <a class="btn secondary" href="#gallery" data-i18n="en">Photo Gallery</a>
+      </div>
+    </div>
+    <div aria-hidden="true">
+      <img src="../PosterCM.jpg" alt="活動主視覺海報" style="width:100%;border-radius:16px;box-shadow:0 10px 26px rgba(0,0,0,.35);border:4px solid rgba(255,255,255,.25)">
+    </div>
+  </div>
+</header>
+<br><br><br>
+
+<div class="container infostrip" role="region" aria-label="關鍵資訊">
+  <div class="infogrid">
+    <div class="icard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M8 12h8M12 8v8"/></svg>
+      <div>
+        <h4 data-i18n="zh">活動精神 ChiMeiRA</h4>
+        <h4 data-i18n="en">Spirit ChiMeiRA</h4>
+        <p data-i18n="zh">Compassion 人本關懷<br>Multi‑disciplinary 團隊協作<br>Resilience 韌性永續<br>Agility 敏捷創新</p>
+        <p data-i18n="en">Compassion<br>Multi‑disciplinary<br>Resilience<br>Agility</p>
+      </div>
+    </div>
+    <div class="icard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 7h8M8 11h8M8 15h6"/></svg>
+      <div>
+        <h4 data-i18n="zh">四軸同場</h4>
+        <h4 data-i18n="en">Four Tracks</h4>
+        <p data-i18n="zh">國際研討會 × 工作坊 × 共識營 × Salon 短講<br>醫療 × 文化跨域共振</p>
+        <p data-i18n="en">International Symposium × Workshops × Consensus Discussions × Public Salon talks.</p>
+      </div>
+    </div>
+    <div class="icard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+      <div>
+        <h4 data-i18n="zh">三院區同行</h4>
+        <h4 data-i18n="en">Across Campuses</h4>
+        <p data-i18n="zh">永康 × 柳營 × 佳里奇美共同參與<br>鏈結在地、向下扎根</p>
+        <p data-i18n="en">Yongkang, Liouying and Chiali campuses join forces for local impact.</p>
+      </div>
+    </div>
+    <div class="icard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18M12 3v18" /><circle cx="12" cy="12" r="9"/></svg>
+      <div>
+        <h4 data-i18n="zh">場地與時間</h4>
+        <h4 data-i18n="en">Venue & Time</h4>
+        <p data-i18n="zh">2025/11/16（日）<br>09:30–17:30<br>奇美博物館（奇美廳／豐收廳）</p>
+        <p data-i18n="en">Nov 16, 2025<br>09:30–17:30<br>Chi Mei Museum (Chi Mei Hall / Harvest Hall)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="program">
+  <div class="container">
+    <h2 data-i18n="zh">議程總覽</h2>
+    <h2 data-i18n="en">Programme at a Glance</h2>
+    <div class="cta">
+        <a class="btn" href="../Schedule.pdf">議程 Schedule</a>
+      </div>
+    <h2 data-i18n="en">Programme at a Glance</h2>
+    <p class="lead" data-i18n="zh">以下時間與講者依官方 PDF 為準；四軸將在不同場地同步進行（詳見各軌）。</p>
+    <p class="lead" data-i18n="en">Times and speakers follow the official PDF. Four parallel tracks run in separate rooms (see details below).</p>
+
+    <div class="tracks" aria-label="四大軌">
+      <!-- Symposium -->
+      <div class="track">
+        <h3 class="pill" data-i18n="zh">國際研討會｜奇美廳</h3>
+        <h3 class="pill" data-i18n="en">Symposium | Chi Mei Hall</h3>
+        <div class="slot"><h4>09:30–10:00</h4><p class="note" data-i18n="zh">報到 Registration</p><p class="note" data-i18n="en">Registration</p></div>
+        <div class="slot"><h4>10:00–10:10</h4><p>Opening × World AMR Awareness Week — <span class="note">Hui‑Yun Liang & Shu‑Lien Chou</span></p></div>
+        <div class="slot"><h4>10:10–10:20</h4><p>Opening Remarks — <span class="note">湯宏仁副院長 Prof. Hung‑Jen Tang</span></p></div>
+        <div class="slot"><h4>10:20–10:25</h4><p>Transforming Care: The Chi Mei Journey</p></div>
+        <div class="slot"><h4>10:25–11:05</h4><p>Taiwan CDC’s post-COVID reform — <span class="note">羅一鈞署長 Dr. Yi‑Chun Lo</span></p></div>
+        <div class="slot"><h4>11:05–11:45</h4><p>Building Equitable Care Systems — <span class="note">Dr. Bruce Agins (US)</span></p></div>
+        <div class="slot"><h4>11:45–12:20</h4><p>Innovation & Best Practices in Patient Safety and Quality — <span class="note">Dr. Shin Ushiro (JP)</span></p></div>
+        <div class="slot"><h4>12:20–12:30</h4><p>Q & A — <span class="note">湯宏仁副院長 Prof. Hung‑Jen Tang</span></p></div>
+        <div class="slot"><h4>12:30–13:30</h4><p>Lunch — <span class="note">Chi Mei Hall</span></p></div>
+        <div class="slot"><h4>13:30–14:30</h4><p>Advancing Medical Quality in Smart Healthcare Transformation — <span class="note">莊旺川主任 Dr. Wang‑Chuan Juang</span></p></div>
+        <div class="slot"><h4>14:30–15:00</h4><p>Medication Safety: Can AI really help? — <span class="note">徐秉裕組長 Mr. Ping‑Yu Hsu</span></p></div>
+        <div class="slot"><h4>15:00–15:30</h4><p>Human‑Centricity & Innovative Excellence — <span class="note">杜漢祥部長 Dr. Han Siong Toh</span></p></div>
+        <div class="slot"><h4>15:30–16:00</h4><p>Coffee Break</p></div>
+        <div class="slot"><h4>16:00–16:40</h4><p>Visionary Implementation Report</p></div>
+        <div class="slot"><h4>16:40–17:00</h4><p>Closing Remarks — <span class="note">湯宏仁副院長 Prof. Hung‑Jen Tang</span></p></div>
+        <div class="slot"><h4>17:00–17:30</h4><p>Chi Mei Month Exhibition — <span class="note">Brescia Hall</span></p></div>
+      </div>
+      <!-- Workshops -->
+      <div class="track">
+        <h3 class="pill" data-i18n="zh">工作坊｜豐收廳 (需事先報名，詳見報告表)</h3>
+        <h3 class="pill" data-i18n="en">Workshops | Harvest Hall (need to register in advanced)</h3>
+        <div class="slot"><h4>10:30–11:20</h4><p>SDM Workshop — <span class="note">張基生高專 Chi‑Sheng Chang</span></p></div>
+        <div class="slot"><h4>11:30–12:20</h4><p>Infection Control Workshop — <span class="note">梁惠雲副組長 Hui‑Yun Liang</span></p></div>
+        <div class="slot"><h4>12:30–13:30</h4><p>Lunch</p></div>
+        <div class="slot"><h4>13:30–14:30</h4><p>Patient Safety Workshop — <span class="note">楊翼寧執秘 Dr. I‑Ning Yang</span></p></div>
+        <div class="slot"><h4>14:30–15:30</h4><p class="note" data-i18n="zh">（茶點預備）</p><p class="note" data-i18n="en">(Coffee break preparation)</p></div>
+        <div class="slot"><h4>15:30–16:00</h4><p>Coffee Break</p></div>
+      </div>
+      <!-- Consensus -->
+      <div class="track">
+        <h3 class="pill" data-i18n="zh">共識營｜會議室 (限邀請參加)</h3>
+        <h3 class="pill" data-i18n="en">Consensus | Meeting Room (only invited)</h3>
+        <div class="slot"><h4>10:30–11:20</h4><p>Group 1: Excellence Safety — <span class="note">Dr. I‑Ning Yang</span></p></div>
+        <div class="slot"><h4>11:30–12:20</h4><p>Group 2: Innovative Quality — <span class="note">Dr. Kuan‑Hung Lin</span></p></div>
+        <div class="slot"><h4>12:30–13:30</h4><p>Lunch</p></div>
+        <div class="slot"><h4>13:20–14:10</h4><p>Group 3: People‑Centered Resilience — <span class="note">Dr. Li‑Chin Cheng</span></p></div>
+        <div class="slot"><h4>14:10–14:50</h4><p>Chiali Chi Mei</p></div>
+        <div class="slot"><h4>14:50–15:30</h4><p>Liouying Chi Mei</p></div>
+        <div class="slot"><h4>15:30–16:00</h4><p>Coffee Break</p></div>
+      </div>
+      <!-- Salon -->
+      <div class="track">
+        <h3 class="pill" data-i18n="zh">Salon 短講｜布雷西亞廳 (開放一般民眾參加)</h3>
+        <h3 class="pill" data-i18n="en">Public Salon | Brescia Hall（open to public)</h3>
+        <div class="slot"><h4>11:30–11:50</h4><p>ICU I See You 看見不一樣的溫暖 — <span class="note">陳志金主任 Dr. Che‑Kim Tan</span></p></div>
+        <img src="../Poster1100.jpg" alt="scene" style="display:block; margin:10px auto; max-width:100%; height:auto;">
+        <div class="slot"><h4>12:30–13:30</h4><p>Lunch</p></div>
+        <div class="slot"><h4>13:30–14:00</h4><p>防疫故事 — <span class="note">羅一鈞署長 Dr. Yi‑Chun Lo</span></p></div>
+        <img src="../Poster1101.jpg" alt="scene" style="display:block; margin:10px auto; max-width:100%; height:auto;">
+        <div class="slot"><h4>14:00–14:30</h4><p>友善醫療 — <span class="note">杜漢祥部長 Dr. Han Siong Toh</span></p></div>
+        <img src="../Poster1102.jpg" alt="scene" style="display:block; margin:10px auto; max-width:100%; height:auto;">
+        <div class="slot"><h4>15:30–16:00</h4><p>Coffee Break</p></div>
+      </div>
+    </div>
+    <p class="note" style="margin-top:12px" data-i18n="zh">＊議程與場地依最終公告為準；部分講題可能微調。</p>
+    <p class="note" style="margin-top:12px" data-i18n="en">*Programme/rooms subject to final confirmation; minor adjustments possible.</p>
+  </div>
+</section>
+
+<section id="about" style="background:#fff">
+  <div class="container grid-2">
+    <div>
+      <h2 data-i18n="zh">關於 ChiMeiRA</h2>
+      <h2 data-i18n="en">About ChiMeiRA</h2>
+      <p class="lead" data-i18n="zh">“Chimera” 源自於希臘神話，傳聞它上半身像獅子，中間像山羊，下半身是蛇；所以它也代表複合體的概念，後來醫學上也引用它來作為嵌合體。2025年『奇美月』活動結合了奇美醫院和奇美博物館，代表的是醫療和文化的嵌合。『雙管奇下』更是感染管制和品質管理的嵌合，因此研討會取名為 “ChiMeiRA”。，象徵醫療與文化的嵌合。本活動由品質管理部與感染管制中心共同發起，鏈結三院區與在地夥伴，打造高可靠、高韌性、以人為本的學習型系統。</p>
+      <p class="lead" data-i18n="en">“Chimera” originates from Greek mythology — a creature said to have the head of a lion, the body of a goat, and the tail of a serpent. The word thus came to symbolize a fusion or composite being, and it was later adopted in medicine to describe a chimeric cell or antibody. 2025 Chi Mei Month brings together Chi Mei Hospital and Chi Mei Museum, representing the fusion of medicine and culture. The theme “雙管奇下” further reflects the integration of Infection Control and Quality Management, which is why the symposium is named “ChiMeiRA.” Co‑hosted by the Departments of Quality Management and Infection Control Center, it connects three campuses and local partners to build a high‑reliability, resilient, people‑centred learning system.</p>
+      <div class="card" data-i18n="zh"><div class="pill">主辦單位</div><p>奇美醫院 品質管理部 × 感染管制中心（永康、柳營、佳里共同參與）</p></div>
+      <div class="card" data-i18n="zh"><div class="pill">學分申請</div><p>衛生福利部繼續教育積分：醫師、護理師、專師品質課程學分<br>台灣醫療品質協會學分<br>感染管制學會學分<br>
+        奇美醫院醫品病安學分、感染管制、CFD核心課程、科部外教學積分</p></div>
+      <div class="card" data-i18n="en"><div class="pill">Continuing Education credits</div><p>Ministry of Health and Welfare (MOHW) Healthcare Quality Credits for Doctors, Nurses & Nurse Practitioners (NP)<br>
+        Taiwan Healthcare Quality Association (THQA) credits<br>
+        Chi Mei Medical Center (CMMC) Internal Credits: Healthcare Quality and Patient Safety, Infection Control, CFD, Departmental External Training Credits</p></div>
+      <a class="btn" href="https://qpig0218.github.io/ChiMeiMonth2/">2025年奇美月活動</a>
+    </div>
+    <div>
+      <h2 data-i18n="zh">參與亮點</h2>
+      <h2 data-i18n="en">Highlights</h2>
+      <div class="cards">
+        <div class="card"><h3>🧭 <span data-i18n="zh">四軸併行</span><span data-i18n="en">Four‑track design</span></h3><p data-i18n="zh">理論 × 實作 × 共識 × 公眾，從醫療到社會</p><p data-i18n="en">Theory × Practice × Consensus × Public outreach.</p></div>
+        <div class="card"><h3>🤝 <span data-i18n="zh">跨域合作</span><span data-i18n="en">Cross‑sector</span></h3><p data-i18n="zh">品質 × 感控 × 社區 × 文化</p><p data-i18n="en">Quality × Infection Control × Community × Culture.</p></div>
+        <div class="card"><h3>🌱 <span data-i18n="zh">永續韌性</span><span data-i18n="en">Resilience</span></h3><p data-i18n="zh">以人為本、面向未來的系統設計</p><p data-i18n="en">People‑centred, future‑ready system design.</p></div>
+      </div>
+      <img src="../speaker.png" alt="scene" style="display:block; margin:10px auto; max-width:100%; height:auto;">
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:#fff">
+  <div class="container">
+    <h2 data-i18n="zh">活動相片集</h2>
+    <h2 data-i18n="en">Photo Gallery</h2>
+    <p class="lead" data-i18n="zh">以下為活動當日照片精選。點選縮圖可查看大圖。</p>
+    <p class="lead" data-i18n="en">Selected photos from the event. Click a thumbnail to view a larger image.</p>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Example thumbnails — replace src with actual image paths -->
+      <div class="thumb" data-title="會場外觀 / Venue exterior"><img src="../《雙管奇下．深耕臺南》國際研討會盛大登場！奇美醫療體系（永康奇美醫院、柳營奇美.jpg" alt="會場外觀"></div>
+      <div class="thumb" data-title="研討會現場 / Symposium"><img src="../打破醫院圍牆！奇美醫療體系讓醫療、文化、社區健康大串聯.jpg" alt="研討會現場"></div>
+      <div class="thumb" data-title="講者合照 / Speakers"><img src="../DSC02395.JPG" alt="講者合照"></div>
+      <div class="thumb" data-title="工作坊實作 / Workshop"><img src="../DSC02385.JPG" alt="工作坊實作"></div>
+      <div class="thumb" data-title="會議"><img src="../052A0153.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0158.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0177.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0183.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0182.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0206.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0218.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0234.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0242.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0277.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0296.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0294.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0293.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0314.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0318.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0348.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0349.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0370.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0361.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0404.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0406.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0408.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0414.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0418.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0416.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0422.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0425.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0429.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0434.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0444.jpg" alt="會議"></div>
+<div class="thumb" data-title="會議"><img src="../052A0136.jpg" alt="會議"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+      <div>
+        <img id="lightboxImg" src="" alt="">
+        <div class="meta" id="lightboxMeta"></div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:12px" data-i18n="zh">圖片授權請遵照講者與受訪者授權範圍，如需下載高解析圖請聯絡主辦單位。</p>
+    <p class="note" style="margin-top:12px" data-i18n="en">Please respect speaker/participant photo permissions. Contact the organisers for high‑res downloads.</p>
+  </div>
+</section>
+
+<section id="media" style="background:#f9fbff">
+  <div class="container">
+    <h2 data-i18n="zh">媒體報導</h2>
+    <h2 data-i18n="en">Media Coverage</h2>
+    <p class="lead" data-i18n="zh">以下整理活動相關新聞與報導連結，持續更新中。</p>
+    <p class="lead" data-i18n="en">A curated list of news articles and reports about the event.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9I37Tgx5-3k?si=v1kdDXDVo9r6m4D0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="media-list">
+
+      <!-- 蕃薯藤 -->
+      <div class="media-item">
+        <img src="https://n.yam.com/favicon.ico" style="width:24px;height:24px;" alt="蕃薯藤 icon">
+        <div>
+          <div>
+            <a href="https://n.yam.com/Article/20251116978216" target="_blank">
+              奇美醫療體系跨界串聯 國際研討會打造健康臺南新格局
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">蕃薯藤 • 2025/11/16</div>
+          <div class="note" data-i18n="en">Yam News • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- 墨新聞 -->
+      <div class="media-item">
+        <img src="https://more-news.tw/favicon.ico" style="width:24px;height:24px;" alt="墨新聞 icon">
+        <div>
+          <div>
+            <a href="https://more-news.tw/454656/" target="_blank">
+              奇美三院區國際研討會盛大登場 打造「健康臺灣」新典範
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">墨新聞 • 2025/11/16</div>
+          <div class="note" data-i18n="en">MORE News • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- 鏡新聞 -->
+      <div class="media-item">
+        <img src="https://www.mirrormedia.mg/favicon.ico" style="width:24px;height:24px;" alt="鏡新聞 icon">
+        <div>
+          <div>
+            <a href="https://www.mirrormedia.mg/external/amp/setn_1752031" target="_blank">
+              奇美國際研討會登場 3院串連打造健康台灣
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">鏡新聞 • 2025/11/16</div>
+          <div class="note" data-i18n="en">Mirror Media • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- Yahoo新聞 -->
+      <div class="media-item">
+        <img src="https://tw.news.yahoo.com/favicon.ico" style="width:24px;height:24px;" alt="Yahoo icon">
+        <div>
+          <div>
+            <a href="https://tw.news.yahoo.com/%E5%9C%8B%E9%9A%9B%E5%B0%88%E5%AE%B6%E8%88%87%E5%8D%80%E5%9F%9F%E5%A4%A5%E4%BC%B4%E5%85%B1%E8%81%9A%E5%A5%87%E7%BE%8E-%E5%88%86%E4%BA%AB%E5%89%8D%E6%B2%BF%E9%86%AB%E7%99%82%E7%B6%93%E9%A9%97-083210585.html" target="_blank">
+              國際專家與區域夥伴共聚奇美 分享前沿醫療經驗
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">Yahoo新聞 • 2025/11/16</div>
+          <div class="note" data-i18n="en">Yahoo News • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- 三立新聞 -->
+      <div class="media-item">
+        <img src="https://www.setn.com/favicon.ico" style="width:24px;height:24px;" alt="SETN icon">
+        <div>
+          <div>
+            <a href="https://www.setn.com/m/ampnews.aspx?NewsID=1752031" target="_blank">
+              奇美國際研討會登場 3院串連打造健康台灣
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">三立新聞 • 2025/11/16</div>
+          <div class="note" data-i18n="en">SETN • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- ETtoday -->
+      <div class="media-item">
+        <img src="https://www.ettoday.net/favicon.ico" style="width:24px;height:24px;" alt="ETtoday icon">
+        <div>
+          <div>
+            <a href="https://www.ettoday.net/news/20251116/3068396.htm" target="_blank">
+              奇美醫療體系國際研討會 響應世界抗生素週
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">ETtoday • 2025/11/16</div>
+          <div class="note" data-i18n="en">ETtoday News • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- 中華日報 -->
+      <div class="media-item">
+        <img src="https://www.cdns.com.tw/favicon.ico" style="width:24px;height:24px;" alt="中華日報 icon">
+        <div>
+          <div>
+            <a href="https://www.cdns.com.tw/articles/1319082" target="_blank">
+              國際專家與區域夥伴共聚奇美 分享前沿醫療經驗
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">中華日報 • 2025/11/16</div>
+          <div class="note" data-i18n="en">CDNS • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- 青年日報 -->
+      <div class="media-item">
+        <img src="https://www.ydn.com.tw/favicon.ico" style="width:24px;height:24px;" alt="青年日報 icon">
+        <div>
+          <div>
+            <a href="https://www.ydn.com.tw/news/newsInsidePage?chapterID=1812555" target="_blank">
+              奇美3院國際研討會 打造「健康臺灣」新典範
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">青年日報 • 2025/11/16</div>
+          <div class="note" data-i18n="en">Youth Daily News • 2025/11/16</div>
+        </div>
+      </div>
+
+      <!-- 中央社 (Yahoo聯播) -->
+      <div class="media-item">
+        <img src="https://www.cna.com.tw/favicon.ico" style="width:24px;height:24px;" alt="中央社 icon">
+        <div>
+          <div>
+            <a href="https://tw.news.yahoo.com/%E5%A5%87%E7%BE%8E%E9%86%AB%E7%99%82%E9%AB%94%E7%B3%BB%E5%9C%8B%E9%9A%9B%E7%A0%94%E8%A8%8E%E6%9C%83-%E9%9F%BF%E6%87%89%E4%B8%96%E7%95%8C%E6%8A%97%E7%94%9F%E7%B4%A0%E9%80%B1-%E5%9C%96-074355124.html" target="_blank">
+              奇美醫療體系國際研討會 響應世界抗生素週（中央社）
+            </a>
+          </div>
+          <div class="note" data-i18n="zh">中央社 • 2025/11/16</div>
+          <div class="note" data-i18n="en">CNA • 2025/11/16</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h3 data-i18n="zh">奇美醫院｜品質管理部 × 感染管制中心</h3>
+        <h3 data-i18n="en">Chi Mei Medical Center | Quality Management × Infection Control</h3>
+        <p data-i18n="zh">我們致力於人本、創新及卓越的高信賴照護。感謝所有參與者與夥伴！</p>
+        <p data-i18n="en">Committed to people‑centred, innovative excellence and high‑reliability care. Thank you to all participants and partners!</p>
+        <p>&copy; 2025 Chi Mei Medical Center. All rights reserved.</p>
+      </div>
+      <div>
+        <h3 data-i18n="zh">聯絡我們</h3>
+        <h3 data-i18n="en">Contact</h3>
+        <p><a href="mailto:cqm@mail.chimei.org.tw">cqm@mail.chimei.org.tw</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Language toggle
+  document.querySelectorAll('[data-setlang]').forEach(btn=>{
+    btn.addEventListener('click',e=>{e.preventDefault();document.documentElement.setAttribute('data-lang',btn.dataset.setlang)})
+  });
+
+  // Lightbox for gallery
+  (function(){
+    const grid = document.getElementById('galleryGrid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxMeta = document.getElementById('lightboxMeta');
+
+    if (!grid) return;
+    grid.querySelectorAll('.thumb').forEach(thumb=>{
+      thumb.addEventListener('click',()=>{
+        const img = thumb.querySelector('img');
+        const src = img.getAttribute('src');
+        const alt = img.getAttribute('alt') || '';
+        const title = thumb.dataset.title || '';
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightboxMeta.textContent = title;
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden','false');
+      });
+    });
+
+    // close on click outside or Escape
+    lightbox.addEventListener('click',(e)=>{
+      if (e.target === lightbox || e.key === 'Escape') {
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden','true');
+        lightboxImg.src='';
+      }
+    });
+    document.addEventListener('keydown',(e)=>{
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden','true');
+        lightboxImg.src='';
+      }
+    });
+  })();
+
+  // Note: countdown removed intentionally — page now shows static "Event concluded".
+</script>
+</body>
+</html>
+

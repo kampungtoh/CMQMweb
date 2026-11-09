@@ -1,34 +1,9 @@
 'use strict';
-const registrationOrigin='https://chimeira-2026-registration.garytoh.chatgpt.site';
-const frame=document.getElementById('registration-frame');
-let selectedWorkshop='',readingSize=18;
-const postToForm=message=>frame.contentWindow?.postMessage(message,registrationOrigin);
-function setFont(size){
- readingSize=size;document.documentElement.style.fontSize=size+'px';
- 
- 
- postToForm({type:'chimeira-reading-size',size});
- document.getElementById('standalone-registration').href=registrationOrigin+'/?font='+size+(selectedWorkshop?'&workshop='+selectedWorkshop:'');
-}
-setFont(readingSize);
-
-frame.addEventListener('load',()=>{postToForm({type:'chimeira-reading-size',size:readingSize});if(selectedWorkshop)postToForm({type:'chimeira-stage-workshop',workshop:selectedWorkshop});});
+// Archived event: retain agenda filters, photo gallery and logo animation.
 document.querySelectorAll('[data-session]').forEach(button=>button.addEventListener('click',()=>{
  document.querySelectorAll('[data-session]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
  document.querySelectorAll('[data-period]').forEach(row=>{row.hidden=button.dataset.session!=='all'&&row.dataset.period!==button.dataset.session;});
 }));
-document.querySelectorAll('[data-workshop]').forEach(button=>button.addEventListener('click',()=>{
- selectedWorkshop=button.dataset.workshop;
- document.querySelectorAll('.workshop-select').forEach(b=>{const selected=b.dataset.workshop===selectedWorkshop;b.setAttribute('aria-pressed',String(selected));b.textContent=(selected?'已選擇工作坊 ':'選擇工作坊 ')+b.dataset.workshop;b.closest('.workshop').classList.toggle('is-selected',selected);});
- postToForm({type:'chimeira-stage-workshop',workshop:selectedWorkshop});
- document.getElementById('standalone-registration').href=registrationOrigin+'/?workshop='+selectedWorkshop+'&font='+readingSize;
- document.getElementById('registration').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
-}));
-window.addEventListener('message',event=>{
- if(event.origin!==registrationOrigin||event.source!==frame.contentWindow)return;
- if(event.data?.type==='chimeira-form-ready'){postToForm({type:'chimeira-reading-size',size:readingSize});if(selectedWorkshop)postToForm({type:'chimeira-stage-workshop',workshop:selectedWorkshop});}
- if(event.data?.type==='chimeira-form-height'&&Number.isFinite(event.data.height))frame.style.height=Math.min(5000,Math.max(400,event.data.height+24))+'px';
-});
 // Real 2025 photographs, with native modal focus and keyboard navigation.
 const photoButtons=Array.from(document.querySelectorAll('[data-photo]'));
 const dialog=document.getElementById('photo-dialog');let photoIndex=0,photoTrigger=null;
@@ -85,3 +60,4 @@ if("IntersectionObserver" in window){const observer=new IntersectionObserver(ent
  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.05}).observe(stage);
  reduced.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);sync();
 })();
+
